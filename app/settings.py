@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'appointment.apps.AppointmentConfig',
+    'account.apps.AccountConfig'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +83,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgesql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ["POSTGRES_NAME"],
         'USER': os.environ["POSTGRES_USER"],
         'PASSWORD': os.environ["POSTGRES_PASSWORD"],
